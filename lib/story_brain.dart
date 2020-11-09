@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import 'story.dart';
 
 class StoryBrain {
@@ -57,27 +59,15 @@ class StoryBrain {
   void nextStory(int choiceNumber){
     switch (_storyNumber) {
       case 0:
-        if (choiceNumber == 1) {
-          _storyNumber = 2;
-        } else {
-          _storyNumber = 1;
-        }
+        _storyNumber = (choiceNumber == 1) ? 2 : 1;
         break;
 
       case 1:
-        if(choiceNumber == 1) {
-          _storyNumber = 2;
-        } else {
-          _storyNumber = 3;
-        }
+        _storyNumber = (choiceNumber == 1) ? 2 : 3;
         break;
 
       case 2:
-        if (choiceNumber == 1){
-          _storyNumber = 5;
-        } else {
-          _storyNumber = 4;
-        }
+        _storyNumber = (choiceNumber == 1) ? 5 : 4;
         break;
 
       default:
